@@ -1,4 +1,3 @@
-const { Model } = require('sequelize');
 const Sequelize = require('sequelize');
 
 const sequelize = require('../util/database');
@@ -10,8 +9,8 @@ const user = sequelize.define('user', {
         allowNull : false,
         primaryKey: true
     },
-    name : sequelize.STRING,
-    email : sequelize.STRING
+    name : Sequelize.STRING,
+    email : Sequelize.STRING
 });
 
-Model.exports = user;
+module.exports = user;
